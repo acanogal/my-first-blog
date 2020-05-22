@@ -1,0 +1,29 @@
+{% load static %}
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="//maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap-theme.min.css">
+    <script src="https://kit.fontawesome.com/83c2ff4a11.js" crossorigin="anonymous"></script>
+    <link href="//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+    <title>Django Girls blog</title>
+</head>
+
+<body>
+    <div class="page-header">
+        <a href="{% url 'post_new' %}" class="top-menu"><span class="fas fa-plus"></span></a>
+        <h1><a href="/">Django Girls Blog</a></h1>
+    </div>
+
+    <div class="content container">
+        <div class="row">
+            <div class="col-md-8">
+                {% block content %}
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
